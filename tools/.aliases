@@ -1,5 +1,6 @@
 # ALIAS
 alias v="nvim"
+alias vim="nvim"
 
 alias ga='git add'
 alias gc='git commit -m'
