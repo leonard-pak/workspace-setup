@@ -1,0 +1,12 @@
+# ALIAS
+alias v="nvim"
+
+alias ga='git add'
+alias gc='git commit -m'
+alias gs='git status -s'
+alias gl='git log --pretty=format:"%C(yellow)%h %ad %C(red)| %C(white)%s%C(auto)%d %C(blue)[%an]" --graph --date=short'
+alias gd='git diff'
+
+alias ls="eza -l --no-user --no-filesize --no-permissions --no-time --icons"
+alias ll="eza -l -a --icons"
+alias lt="eza -T --icons"
