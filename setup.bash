@@ -24,6 +24,11 @@ sudo chmod +x eza
 sudo chown root:root eza
 sudo mv eza /usr/local/bin/eza
 
+# Install thefuck
+sudo dnf install -y python3-pip
+sed -i -E "s/plugins=\((.*)\)/plugins=(\1 thefuck)/" $HOME/.zshrc
+
+
 # Upgrade .zshrc
 echo "source $SCRIPT_DIR/configs/.zshrc" >> $HOME/.zshrc
 echo "source $SCRIPT_DIR/tools/.aliases" >> $HOME/.zshrc

@@ -11,6 +11,7 @@
 1. Install zsh and oh-my-zsh
 1. Install Hack Nerd Font
 1. Install eza
+1. Install thefuck
 1. Upgrade *.zshrc*
 
 > or call `./setup.bash`
