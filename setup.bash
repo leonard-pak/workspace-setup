@@ -1,14 +1,15 @@
 #!/bin/bash
+set -e
 
 SCRIPT_PATH=$(readlink -f "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
 # Prepare
-sudo dnf install -y wget
+sudo dnf install -y wget curl git
 
 # Install zsh and oh-my-zsh
 sudo dnf install -y zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install Hack Nerd Font
 sudo mkdir -p /usr/local/share/fonts/hack
@@ -28,6 +29,12 @@ sudo mv eza /usr/local/bin/eza
 sudo dnf install -y python3-pip
 sed -i -E "s/plugins=\((.*)\)/plugins=(\1 thefuck)/" $HOME/.zshrc
 
+# Install neovim
+sudo dnf install -y neovim
+git config --global core.editor "nvim"
+
+# Install bat
+sudo dnf install -y bat
 
 # Upgrade .zshrc
 echo "source $SCRIPT_DIR/configs/.zshrc" >> $HOME/.zshrc

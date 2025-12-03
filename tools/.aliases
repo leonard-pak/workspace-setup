@@ -1,4 +1,3 @@
-# ALIAS
 alias v="nvim"
 alias vim="nvim"
 
@@ -11,3 +10,5 @@ alias gd='git diff'
 alias ls="eza -l --no-user --no-filesize --no-permissions --no-time --icons"
 alias ll="eza -l -a --icons"
 alias lt="eza -T --icons"
+
+alias cat="bat"
