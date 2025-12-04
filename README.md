@@ -15,5 +15,6 @@
 1. Install neovim
 1. Install bat
 1. Upgrade *.zshrc*
+1. Install tmux
 
 > or call `./setup.bash`

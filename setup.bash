@@ -40,3 +40,6 @@ sudo dnf install -y bat
 echo "source $SCRIPT_DIR/configs/.zshrc" >> $HOME/.zshrc
 echo "source $SCRIPT_DIR/tools/.aliases" >> $HOME/.zshrc
 
+# Install tmux
+sudo dnf install -y tmux
+ln -s $SCRIPT_DIR/configs/.tmux.conf $HOME/.tmux.conf

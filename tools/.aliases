@@ -12,3 +12,4 @@ alias ll="eza -l -a --icons"
 alias lt="eza -T --icons"
 
 alias cat="bat"
+alias ccat="\cat"
