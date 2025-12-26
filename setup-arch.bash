@@ -1,0 +1,60 @@
+#!/bin/bash
+set -e
+
+SCRIPT_PATH=$(readlink -f "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+
+i_pkg() {
+    local pkg=$1
+    if ! pacman -Qi "$pkg" > /dev/null 2>&1; then
+        echo "Пакет $pkg не найден. Установка..."
+        sudo pacman -S --noconfirm "$pkg"
+    else
+        echo "Пакет $pkg уже установлен."
+    fi
+}
+
+# Prepare
+i_pkg wget
+i_pkg curl
+i_pkg git
+
+# Install zsh and oh-my-zsh
+i_pkg zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Change zsh theme
+sed -i 's/^ZSH_THEME=.*/ZSH_THEME="gozilla"/' "$HOME"/.zshrc 
+
+# Install Hack Nerd Font
+sudo mkdir -p /usr/local/share/fonts/hack
+wget -O - https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz | sudo tar Jx -C /usr/local/share/fonts/hack
+sudo chown -R root: /usr/local/share/fonts/hack
+sudo chmod 644 /usr/local/share/fonts/hack/*
+sudo fc-cache -v
+
+# Install EZA
+i_pkg eza
+
+# Install thefuck
+i_pkg thefuck
+
+# Install neovim
+i_pkg neovim
+git config --global core.editor "nvim"
+
+# Install bat
+i_pkg bat
+
+# Upgrade .zshrc
+echo "source $SCRIPT_DIR/configs/.zshrc" >> "$HOME"/.zshrc
+echo "source $SCRIPT_DIR/tools/.aliases" >> "$HOME"/.zshrc
+
+# Install tmux
+i_pkg tmux
+ln -s "$SCRIPT_DIR"/configs/.tmux.conf "$HOME"/.tmux.conf
+
+# Install alacritty
+i_pkg alacritty
+mkdir -p "$HOME"/.config/alacritty/
+ln -s "$SCRIPT_DIR"/configs/alacritty.toml "$HOME"/.config/alacritty/alacritty.toml

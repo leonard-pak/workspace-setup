@@ -11,6 +11,9 @@ sudo dnf install -y wget curl git
 sudo dnf install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Change zsh theme
+sed -i 's/^ZSH_THEME=.*/ZSH_THEME="gozilla"/' "$HOME"/.zshrc 
+
 # Install Hack Nerd Font
 sudo mkdir -p /usr/local/share/fonts/hack
 wget -O - https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz | sudo tar Jx -C /usr/local/share/fonts/hack
@@ -27,7 +30,6 @@ sudo mv eza /usr/local/bin/eza
 
 # Install thefuck
 sudo dnf install -y python3-pip
-sed -i -E "s/plugins=\((.*)\)/plugins=(\1 thefuck)/" $HOME/.zshrc
 
 # Install neovim
 sudo dnf install -y neovim
@@ -37,9 +39,14 @@ git config --global core.editor "nvim"
 sudo dnf install -y bat
 
 # Upgrade .zshrc
-echo "source $SCRIPT_DIR/configs/.zshrc" >> $HOME/.zshrc
-echo "source $SCRIPT_DIR/tools/.aliases" >> $HOME/.zshrc
+echo "source $SCRIPT_DIR/configs/.zshrc" >> "$HOME"/.zshrc
+echo "source $SCRIPT_DIR/tools/.aliases" >> "$HOME"/.zshrc
 
 # Install tmux
 sudo dnf install -y tmux
-ln -s $SCRIPT_DIR/configs/.tmux.conf $HOME/.tmux.conf
+ln -s "$SCRIPT_DIR"/configs/.tmux.conf "$HOME"/.tmux.conf
+
+# Install  alacritty
+sudo dnf install -y alacritty
+mkdir -p "$HOME"/.config/alacritty/
+ln -s "$SCRIPT_DIR"/configs/alacritty.toml "$HOME"/.config/alacritty/alacritty.toml
