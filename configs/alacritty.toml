@@ -1,3 +1,80 @@
+# Start shell
 [terminal.shell]
 program = "sh"
-args = ["-c", "tmux new-session -A -s $(hostname -s | tr ' ' '_')"]
+args = ["-c", "tmux new-session -A -s $(hostname -s | tr ' ' '_'); exit $?"]
+
+# Theme
+[colors.primary]
+background = '#2D2A2E'
+foreground = '#fff1f3'
+
+[colors.normal]
+black = '#2c2525'
+red = '#fd6883'
+green = '#adda78'
+yellow = '#f9cc6c'
+blue = '#f38d70'
+magenta = '#a8a9eb'
+cyan = '#85dacc'
+white = '#fff1f3'
+
+[colors.bright]
+black = '#72696a'
+red = '#fd6883'
+green = '#adda78'
+yellow = '#f9cc6c'
+blue = '#f38d70'
+magenta = '#a8a9eb'
+cyan = '#85dacc'
+white = '#fff1f3'
+
+# Font
+[font]
+size = 12.0
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+# Hotkeys
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+# Window
+[window]
+opacity = 1.9
+decorations = "none"
+
+[window.padding]
+x = 10
+y = 10
+
+[window.dimensions]
+columns = 150
+lines = 40
+
+# Cursor
+[cursor]
+blink_interval = 500
+blink_timeout = 2
+
+[cursor.style]
+shape = "Underline"
+blinking = "Always"
+# Other
+[scrolling]
+history = 10000
