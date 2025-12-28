@@ -54,9 +54,14 @@ action = "Paste"
 key = "V"
 mods = "Control"
 
+[[keyboard.bindings]]
+key = "D"
+mods = "Control"
+chars = "\u0001d"
+
 # Window
 [window]
-opacity = 1.9
+opacity = 0.95
 decorations = "none"
 
 [window.padding]
