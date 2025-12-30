@@ -1,5 +1,6 @@
-alias v="nvim"
-alias vim="nvim"
+alias sudo="sudo "
+
+alias v="vim"
 
 alias ga='git add'
 alias gc='git commit -m'

@@ -39,9 +39,10 @@ i_pkg eza
 # Install thefuck
 i_pkg thefuck
 
-# Install neovim
-i_pkg neovim
-git config --global core.editor "nvim"
+# Install vim
+i_pkg vim
+echo "source $SCRIPT_DIR/configs/.vimrc" | sudo tee -a /etc/vimrc > /dev/null
+git config --global core.editor "vim"
 
 # Install bat
 i_pkg bat
@@ -52,6 +53,7 @@ echo "source $SCRIPT_DIR/tools/.aliases" >> "$HOME"/.zshrc
 
 # Install tmux
 i_pkg tmux
+i_pkg wl-clipboard
 ln -s "$SCRIPT_DIR"/configs/.tmux.conf "$HOME"/.tmux.conf
 
 # Install alacritty
