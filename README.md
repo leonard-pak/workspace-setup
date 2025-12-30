@@ -15,7 +15,7 @@
 1. Install Hack Nerd Font
 1. Install eza
 1. Install thefuck
-1. Install neovim
+1. Install vim
 1. Install bat
 1. Upgrade *.zshrc*
 1. Install tmux
