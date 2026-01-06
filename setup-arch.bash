@@ -8,7 +8,7 @@ i_pkg() {
     local pkg=$1
     if ! pacman -Qi "$pkg" > /dev/null 2>&1; then
         echo "Пакет $pkg не найден. Установка..."
-        sudo pacman -S --noconfirm "$pkg"
+         pacman -Sy --noconfirm "$pkg"
     else
         echo "Пакет $pkg уже установлен."
     fi
@@ -21,7 +21,7 @@ i_pkg git
 
 # Install zsh and oh-my-zsh
 i_pkg zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Change zsh theme
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="gozilla"/' "$HOME"/.zshrc 
@@ -48,8 +48,11 @@ git config --global core.editor "vim"
 i_pkg bat
 
 # Upgrade .zshrc
-echo "source $SCRIPT_DIR/configs/.zshrc" >> "$HOME"/.zshrc
-echo "source $SCRIPT_DIR/tools/.aliases" >> "$HOME"/.zshrc
+{
+    echo "source $SCRIPT_DIR/configs/.zshrc"
+    echo "source $SCRIPT_DIR/tools/.aliases"
+    echo "source $SCRIPT_DIR/tools/.aliases-arch"
+} >> "$HOME"/.zshrc
 
 # Install tmux
 i_pkg tmux

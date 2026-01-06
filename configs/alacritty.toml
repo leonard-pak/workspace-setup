@@ -51,7 +51,7 @@ key = "F11"
 
 [[keyboard.bindings]]
 action = "Paste"
-key = "V"
+key = 47 # Scan-code for 'V' key
 mods = "Control"
 
 [[keyboard.bindings]]
@@ -78,7 +78,7 @@ blink_interval = 500
 blink_timeout = 2
 
 [cursor.style]
-shape = "Underline"
+shape = "Beam"
 blinking = "Always"
 # Other
 [scrolling]
