@@ -28,3 +28,9 @@ Host github-user
   IdentityFile ~/.ssh/github-user
   IdentitiesOnly yes
 ```
+
+## Update url
+
+```bash
+git remote set-url origin git@github-user:username/repo.git
+```
