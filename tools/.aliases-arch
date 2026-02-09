@@ -1,4 +1,4 @@
 #!/bin/sh
 
-alias i="pacman -Sy"
-alias u="pacman -Syu"
+alias i="yay -Sy"
+alias u="yay -Syu"

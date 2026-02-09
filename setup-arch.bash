@@ -68,3 +68,6 @@ ln -s "$SCRIPT_DIR"/configs/alacritty.toml "$HOME"/.config/alacritty/alacritty.t
 i_pkg zsh-syntax-highlighting
 echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME"/.zshrc
 sed -i "s/^plugins=.*/plugins=(git sudo history)/" "$HOME"/.zshrc
+
+# Others
+i_pkg flameshot
