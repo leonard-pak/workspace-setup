@@ -8,7 +8,7 @@ i_pkg() {
     local pkg=$1
     if ! pacman -Qi "$pkg" > /dev/null 2>&1; then
         echo "Пакет $pkg не найден. Установка..."
-         pacman -Sy --noconfirm "$pkg"
+        sudo pacman -Sy --noconfirm "$pkg"
     else
         echo "Пакет $pkg уже установлен."
     fi

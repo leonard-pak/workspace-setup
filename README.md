@@ -1,12 +1,26 @@
 # My workspaces
 
 ## Manual
+
 1. Install chrome
 2. Install git
 3. Add ssh key
 4. (Optional) Install vpn
 5. Create `reps` folder
 6. Clone this repo here
+
+## Gnome
+
+1. Install extension-manager
+2. Install extensions:
+3. Run and raise - run or focus apps by hotkeys
+   1. AppIndicator and KStatusNotifierItem Support - system tray
+   2. Blur my Shell - customization
+
+## Programs
+
+1. VS Code
+2. Telegram
 
 ## Config bash
 
