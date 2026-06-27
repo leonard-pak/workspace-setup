@@ -1,5 +1,11 @@
 # My workspaces
 
+## Manual
+1. Install chrome
+2. Install git
+3. Add ssh key
+4. (Optional) Install vpn
+
 ## Config bash
 
 1. (Optional) Add new user
