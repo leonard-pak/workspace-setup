@@ -5,6 +5,8 @@
 2. Install git
 3. Add ssh key
 4. (Optional) Install vpn
+5. Create `reps` folder
+6. Clone this repo here
 
 ## Config bash
 
