@@ -8,6 +8,7 @@
 4. (Optional) Install vpn
 5. Create `reps` folder
 6. Clone this repo here
+7. Install docker, docker-compose, nvidia-container-toolkit
 
 ## Gnome
 
@@ -16,6 +17,10 @@
 3. Run and raise - run or focus apps by hotkeys
    1. AppIndicator and KStatusNotifierItem Support - system tray
    2. Blur my Shell - customization
+   3. Transparent Window Moving
+   4. Run or raise
+   5. Executor - for get information about ollama status in tray
+   6. Custom Command Menu - for manager ollama by command call in tray
 
 ## Programs
 
