@@ -71,3 +71,4 @@ sed -i "s/^plugins=.*/plugins=(git sudo history)/" "$HOME"/.zshrc
 
 # Others
 i_pkg flameshot
+ln -s "$SCRIPT_DIR"/configs/shortcuts.conf "$HOME"/run-or-raise/shortcuts.conf 

@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=TV Steam
+Exec=/usr/local/bin/tv-steam.sh

@@ -14,13 +14,14 @@
 
 1. Install extension-manager
 2. Install extensions:
-3. Run and raise - run or focus apps by hotkeys
-   1. AppIndicator and KStatusNotifierItem Support - system tray
-   2. Blur my Shell - customization
-   3. Transparent Window Moving
-   4. Run or raise
-   5. Executor - for get information about ollama status in tray
-   6. Custom Command Menu - for manager ollama by command call in tray
+   1. Run and raise - run or focus apps by hotkeys
+   2. AppIndicator and KStatusNotifierItem Support - system tray
+   3. Blur my Shell - customization
+   4. Transparent Window Moving
+   5. Run or raise - shortcuts (see configs/shortcuts.conf)
+   6. Executor - for get information about ollama status in tray
+   7. Custom Command Menu - for manager ollama by command call in tray
+   8. No overview at start-up - disable Overview by default
 
 ## Programs
 
